@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+
+<div class="custom-container">
+  <h1 class="section-title mb-4">Edit Afghan Proverb</h1>
+
+  <form action="/edit/<%= proverb.id %>" method="POST" class="afghan-form">
+    <div class="form-group mb-3">
+      <label for="textDari">Dari</label>
+      <input type="text" class="form-control" id="textDari" name="textDari" value="<%= proverb.textDari %>" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="textPashto">Pashto</label>
+      <input type="text" class="form-control" id="textPashto" name="textPashto" value="<%= proverb.textPashto %>" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="translationEn">English Translation</label>
+      <input type="text" class="form-control" id="translationEn" name="translationEn" value="<%= proverb.translationEn %>" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="category">Category</label>
+      <input type="text" class="form-control" id="category" name="category" value="<%= proverb.category %>" required>
+    </div>
+
+    <button type="submit" class="btn red-btn">Update</button>
+    <a href="/" class="btn btn-secondary ms-2">Cancel</a>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

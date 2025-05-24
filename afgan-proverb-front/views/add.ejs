@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+
+<div class="custom-container">
+  <h2 class="section-title">Add a New Proverb</h2>
+
+  <form action="/add" method="POST" class="afghan-form">
+    <div class="mb-3">
+      <label for="textDari" class="form-label">Dari</label>
+      <textarea class="form-control" id="textDari" name="textDari" rows="2" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="textPashto" class="form-label">Pashto</label>
+      <textarea class="form-control" id="textPashto" name="textPashto" rows="2" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="translationEn" class="form-label">English Translation</label>
+      <textarea class="form-control" id="translationEn" name="translationEn" rows="2" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <input type="text" class="form-control" id="category" name="category" required>
+    </div>
+    <button type="submit" class="btn btn-danger afghan-btn">Add Proverb</button>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

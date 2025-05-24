@@ -1,0 +1,17 @@
+{
+    "name": "afghan-proverbs",
+    "version": "1.0.0",
+    "description": "RESTful API for Afghan Proverbs in Dari, Pashto, and English.",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "axios": "^1.9.0",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
