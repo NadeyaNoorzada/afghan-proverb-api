@@ -4,16 +4,16 @@ const app = express();
 const proverbRoutes = require('./routes/proverbs');
 const PORT = process.env.PORT || 3000;
 
-// تنظیمات view engine
+//  view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'afgan-proverb-front', 'views'));
 
-// میدلورها
+// middles
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// مسیر روت
+// rout path
 app.use('/', proverbRoutes);
 
 app.listen(PORT, () => {
